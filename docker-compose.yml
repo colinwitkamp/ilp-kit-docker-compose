@@ -47,7 +47,7 @@ services:
       API_PRIVATE_HOSTNAME: "localhost"
       API_PUBLIC_HTTPS: "true"
       API_PUBLIC_PATH: "/api"
-      API_PUBLIC_PORT: "443"
+      API_PUBLIC_PORT: "3100"
       API_SECRET: "${ILP_SECRET}"
       CLIENT_HOST: "${ILP_DOMAIN}"
       CLIENT_PORT: "3010"
