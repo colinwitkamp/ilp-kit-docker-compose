@@ -22,12 +22,13 @@ placeholders.
 First, ping your domain name to double-check that it points to the IP address of your server.
 If it does, ssh to your server, and run:
 
+Make the file `.env` in /var/lib/ilp-kit/ with the following contents:
+
 ```sh
-ILP_DOMAIN='example.com' \
-ILP_EMAIL='alice@email.example' \
-ILP_CURRENCY='USD' \
-ILP_SECRET='Z4ZwCWbuo18eMrS1Tgn5L0FPUgK/2pKvgdvZzMogPw4' \
-docker-compose up -d
+ILP_DOMAIN='example.com'
+ILP_EMAIL='alice@email.example'
+ILP_CURRENCY='USD'
+ILP_SECRET='****Your_Secrets'
 ```
 
 Be very careful to use the same hostname, without spelling mistakes, in the `ILP_DOMAIN` variable there,

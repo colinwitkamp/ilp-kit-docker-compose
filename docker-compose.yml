@@ -4,26 +4,6 @@ networks:
   kit:
 services:
 
-  letsencrypt:
-    depends_on:
-      - ilp-kit
-    container_name: "letsencrypt"
-    build: "nginx-letsencrypt-proxy"
-    volumes:
-      - "./data/letsencrypt/etc:/etc/letsencrypt"
-      - "./data/letsencrypt/var:/var/lib/letsencrypt"
-      - "./data/letsencrypt/certs:/opt/certs"
-    ports:
-      - "80:80"
-      - "443:443"
-    environment:
-      NGINX_SERVER_NAME: "${ILP_DOMAIN}"
-      NGINX_EMAIL: "${ILP_EMAIL}"
-    networks:
-      kit:
-        aliases:
-          - "letsencrypt"
-
   postgres:
     container_name: "postgres"
     image: "postgres:latest"
@@ -58,6 +38,9 @@ services:
     ports:
       - "3100:3100"
       - "3101:3101"
+    env_file:
+      - /var/lib/ilp-kit/.env
+      
     environment:
       DB_URI: "postgres://admin:${ILP_SECRET}@postgres/ilp-kit-db"
       API_HOSTNAME: "${ILP_DOMAIN}"
