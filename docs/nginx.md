@@ -3,6 +3,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
+    # http://xxx.xxx -> https://xxx.xxx
     if ($http_x_forwarded_proto != 'https') {
       return 301 https://$host$request_uri;
     }
