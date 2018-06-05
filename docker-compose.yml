@@ -24,13 +24,12 @@ services:
     depends_on:
       - postgres
     container_name: "ilp-kit"
-    image: "interledgerjs/ilp-kit:latest"
+    image: "colinwitkamp/ilp-kit:latest"
 # enable this for development, with a local ilp-kit folder
 #    build: "ilp-kit"
     volumes:
       - "/data/uploads:/usr/src/app/uploads"
-# ( we might not need this, with any luck )
-#      - "./env.list:/usr/src/app/env.list"
+      - "./env.list:/usr/src/app/env.list"
     networks:
       kit:
         aliases:
