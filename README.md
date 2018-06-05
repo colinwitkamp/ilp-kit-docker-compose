@@ -43,6 +43,8 @@ FIXER_API_URL=http://data.fixer.io/api/latest?access_key=xxxx
 ```
 
 You will need to get the fixer.io access key in https://fixer.io/documentation
+Change the fixer url by `docker exec -it 'ilp container id' bash` -> `/node_modules/ilp-connector/src/backends/fixerio` -> edit `const RATES_API = process.env.FIXER_API_URL`
+
 
 Make it executable by `chmod x+ launch.sh`
 
