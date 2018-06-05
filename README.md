@@ -31,6 +31,18 @@ ILP_CURRENCY='USD' \
 ILP_SECRET='Z4ZwCWbuo18eMrS1Tgn5L0FPUgK/2pKvgdvZzMogPw4' \
 docker-compose up -d
 ```
+Make the `env.list`
+
+```
+API_MAILGUN_API_KEY="key-xxxx"
+API_MAILGUN_DOMAIN="xxx.xxx"
+API_EMAIL_SENDER_NAME="xxx admin"
+API_EMAIL_SENDER_ADDRESS="xxx@xx.com"
+API_EMAIL_PAYPAL_ADMIN="xx@xxx.com"
+FIXER_API_URL=http://data.fixer.io/api/latest?access_key=xxxx
+```
+
+You will need to get the fixer.io access key in https://fixer.io/documentation
 
 Make it executable by `chmod x+ launch.sh`
 
