@@ -1,6 +1,7 @@
 # ILP Kit Docker-Compose for AWS
 
 > Deploy a complete ILP kit through docker in AWS
+> bash /var/ilp-kit-docker-compose# 
 
 This repository aims to reduce the setup time for ILP Kit to a single command. Depends on [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/).
 This repository is the fork of https://github.com/interledgerjs/ilp-kit-docker-compose to deploy it to AWS (EC2 + ELB + Route53 + ACM)
